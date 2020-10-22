@@ -4,14 +4,16 @@ clear
 main(){
     echo "[ 1 ]  Adicionar Usuário"
     echo "[ 2 ] Atualizar a lista de pacotes"
-    echo "[ 3 ] Sair"
+    echo "[ 3 ] Instalar Programa"
+    echo "[ 4 ] Sair"
     echo
     echo -n "Qual a opcao desejada ? "
     read OPCAO
     case $OPCAO in
         1) adicionar ;;
         2) atualizar ;;
-        3) exit ;;
+        3) instalar ;;
+        4) exit ;;
         *) "Opcao desconhecida." ; echo ; main ;;
     esac
 }
@@ -28,6 +30,13 @@ adicionar(){
 atualizar(){
     echo "Atualizando a lista de pacotes do sistema"
     sudo apt update
+        main
+}
+
+instalar(){
+    echo "Digite o nome do programa que deseja instalar"
+    read PROGRAMA
+    sudo apt install $PROGRAMA
         main
 }
 
