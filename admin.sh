@@ -2,6 +2,9 @@
 clear
 
 main(){
+    echo "-------------------------------------------"
+    echo "--------------- LINUX ADMIN ---------------"    
+    echo "-------------------------------------------"
     echo "[ 1 ] Adicionar Usuário"
     echo "[ 2 ] Atualizar a lista de pacotes"
     echo "[ 3 ] Instalar Programa"
